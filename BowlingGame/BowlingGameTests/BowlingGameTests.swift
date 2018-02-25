@@ -52,6 +52,12 @@ class BowlingGameTests: XCTestCase {
         XCTAssertEqual(game.score(), 24)
     }
     
+    // test #05
+    func test_perfectGame() {
+        rollMany(pins: 10, times: 12)
+        XCTAssertEqual(game.score(), 300)
+    }
+    
     //MARK: Private methods
     private func rollMany(pins: Int, times: Int) {
         for _ in 1 ... times {
